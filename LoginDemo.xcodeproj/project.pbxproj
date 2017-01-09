@@ -13,6 +13,8 @@
 		69A34C021E2382220084F027 /* LoginDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69A34C001E2382220084F027 /* LoginDemo.xcdatamodeld */; };
 		69A34C041E2382220084F027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A34C031E2382220084F027 /* Assets.xcassets */; };
 		69A34C071E2382220084F027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A34C051E2382220084F027 /* LaunchScreen.storyboard */; };
+		69A34C101E23956C0084F027 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A34C0F1E23956C0084F027 /* DesignableButton.swift */; };
+		69A34C121E2398410084F027 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A34C111E2398410084F027 /* DesignableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		69A34C031E2382220084F027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69A34C061E2382220084F027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69A34C081E2382220084F027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69A34C0F1E23956C0084F027 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		69A34C111E2398410084F027 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		69A34BF81E2382220084F027 /* LoginDemo */ = {
 			isa = PBXGroup;
 			children = (
+				69A34C0E1E2395370084F027 /* IBDesignable */,
 				69A34BF91E2382220084F027 /* AppDelegate.swift */,
 				69A34BFB1E2382220084F027 /* ViewController.swift */,
 				69A34BFD1E2382220084F027 /* Main.storyboard */,
@@ -65,6 +70,15 @@
 				69A34C001E2382220084F027 /* LoginDemo.xcdatamodeld */,
 			);
 			path = LoginDemo;
+			sourceTree = "<group>";
+		};
+		69A34C0E1E2395370084F027 /* IBDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				69A34C0F1E23956C0084F027 /* DesignableButton.swift */,
+				69A34C111E2398410084F027 /* DesignableView.swift */,
+			);
+			name = IBDesignable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +156,8 @@
 				69A34BFC1E2382220084F027 /* ViewController.swift in Sources */,
 				69A34BFA1E2382220084F027 /* AppDelegate.swift in Sources */,
 				69A34C021E2382220084F027 /* LoginDemo.xcdatamodeld in Sources */,
+				69A34C121E2398410084F027 /* DesignableView.swift in Sources */,
+				69A34C101E23956C0084F027 /* DesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
