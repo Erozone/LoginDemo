@@ -120,17 +120,6 @@
                                         <state key="normal" title="LOG IN">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHY-gv-ruN">
                                         <rect key="frame" x="0.0" y="110" width="343" height="50"/>
@@ -142,21 +131,9 @@
                                         <state key="normal" title="SIGN UP">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXw-UU-I4W"/>
-                                            <action selector="signup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IGR-4d-2Ak"/>
-                                            <segue destination="t6T-bE-ey0" kind="show" identifier="toSignUp" id="EXP-6E-4Bs"/>
+                                            <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbn-0o-ZEh"/>
+                                            <segue destination="t6T-bE-ey0" kind="show" identifier="toSignUp" id="wiS-Qd-uRk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -209,9 +186,6 @@
                             <constraint firstItem="Yo6-eY-0dY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zO0-cm-78B"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="signUp" destination="fHY-gv-ruN" id="Tbr-gm-vlR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -350,7 +324,7 @@
                                                 <state key="normal" title="HAVE AN ACCOUNT? LOG IN"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
+                                                        <real key="value" value="9"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>

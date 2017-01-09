@@ -13,6 +13,7 @@
 		69A34C021E2382220084F027 /* LoginDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69A34C001E2382220084F027 /* LoginDemo.xcdatamodeld */; };
 		69A34C041E2382220084F027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A34C031E2382220084F027 /* Assets.xcassets */; };
 		69A34C071E2382220084F027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A34C051E2382220084F027 /* LaunchScreen.storyboard */; };
+		69EF4F411E23F8B0004A0A36 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF4F401E23F8B0004A0A36 /* DesignableButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		69A34C031E2382220084F027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69A34C061E2382220084F027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69A34C081E2382220084F027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69EF4F401E23F8B0004A0A36 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				69A34C051E2382220084F027 /* LaunchScreen.storyboard */,
 				69A34C081E2382220084F027 /* Info.plist */,
 				69A34C001E2382220084F027 /* LoginDemo.xcdatamodeld */,
+				69EF4F401E23F8B0004A0A36 /* DesignableButton.swift */,
 			);
 			path = LoginDemo;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				69A34BFC1E2382220084F027 /* ViewController.swift in Sources */,
 				69A34BFA1E2382220084F027 /* AppDelegate.swift in Sources */,
 				69A34C021E2382220084F027 /* LoginDemo.xcdatamodeld in Sources */,
+				69EF4F411E23F8B0004A0A36 /* DesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

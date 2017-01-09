@@ -20,11 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-   
-    
-    @IBAction func signup(_ sender: Any) {
-        
+    @IBAction func signUp(_ sender: Any) {
+        self.performSegue(withIdentifier: "toSignUp", sender: self)
     }
-    
+   
+   
 }
 
