@@ -1,5 +1,5 @@
 //
-//  DesignableView.swift
+//  DesignableImageView.swift
 //  LoginDemo
 //
 //  Created by Mohit Kumar on 09/01/17.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-@IBDesignable class DesignableView: UIView {
+@IBDesignable class DesignableImageView: UIImageView {
 
-    @IBInspectable var roundCorner: CGFloat = 0.0{
+    @IBInspectable var roundCorner : CGFloat = 0.0{
         didSet{
             self.layer.cornerRadius = roundCorner
         }

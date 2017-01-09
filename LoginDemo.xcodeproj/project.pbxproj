@@ -14,7 +14,7 @@
 		69A34C041E2382220084F027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A34C031E2382220084F027 /* Assets.xcassets */; };
 		69A34C071E2382220084F027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A34C051E2382220084F027 /* LaunchScreen.storyboard */; };
 		69A34C101E23956C0084F027 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A34C0F1E23956C0084F027 /* DesignableButton.swift */; };
-		69A34C121E2398410084F027 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A34C111E2398410084F027 /* DesignableView.swift */; };
+		69A34C141E239AAB0084F027 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A34C131E239AAB0084F027 /* DesignableImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		69A34C061E2382220084F027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69A34C081E2382220084F027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69A34C0F1E23956C0084F027 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
-		69A34C111E2398410084F027 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		69A34C131E239AAB0084F027 /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				69A34C0F1E23956C0084F027 /* DesignableButton.swift */,
-				69A34C111E2398410084F027 /* DesignableView.swift */,
+				69A34C131E239AAB0084F027 /* DesignableImageView.swift */,
 			);
 			name = IBDesignable;
 			sourceTree = "<group>";
@@ -154,9 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				69A34BFC1E2382220084F027 /* ViewController.swift in Sources */,
+				69A34C141E239AAB0084F027 /* DesignableImageView.swift in Sources */,
 				69A34BFA1E2382220084F027 /* AppDelegate.swift in Sources */,
 				69A34C021E2382220084F027 /* LoginDemo.xcdatamodeld in Sources */,
-				69A34C121E2398410084F027 /* DesignableView.swift in Sources */,
 				69A34C101E23956C0084F027 /* DesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
