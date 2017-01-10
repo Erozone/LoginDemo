@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		691F915C1E256CF9002FA265 /* SignUp+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F915A1E256CF9002FA265 /* SignUp+CoreDataClass.swift */; };
+		691F915D1E256CF9002FA265 /* SignUp+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F915B1E256CF9002FA265 /* SignUp+CoreDataProperties.swift */; };
 		69A34BFA1E2382220084F027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A34BF91E2382220084F027 /* AppDelegate.swift */; };
 		69A34BFF1E2382220084F027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A34BFD1E2382220084F027 /* Main.storyboard */; };
 		69A34C041E2382220084F027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A34C031E2382220084F027 /* Assets.xcassets */; };
@@ -15,10 +17,11 @@
 		69F0949C1E24D939000BB1A4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0949B1E24D939000BB1A4 /* SignupViewController.swift */; };
 		69F094A91E24DED6000BB1A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A34BFB1E2382220084F027 /* LoginViewController.swift */; };
 		69F094AE1E24DF4F000BB1A4 /* LoginDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69F094AC1E24DF4F000BB1A4 /* LoginDemo.xcdatamodeld */; };
-		69F094B91E24ED8F000BB1A4 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F094B71E24EB52000BB1A4 /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		691F915A1E256CF9002FA265 /* SignUp+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignUp+CoreDataClass.swift"; sourceTree = "<group>"; };
+		691F915B1E256CF9002FA265 /* SignUp+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignUp+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		69A34BF61E2382220084F027 /* LoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A34BF91E2382220084F027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69A34BFB1E2382220084F027 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -29,7 +32,6 @@
 		69EF4F401E23F8B0004A0A36 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		69F0949B1E24D939000BB1A4 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		69F094AD1E24DF4F000BB1A4 /* LoginDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoginDemo.xcdatamodel; sourceTree = "<group>"; };
-		69F094B71E24EB52000BB1A4 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +67,13 @@
 				69F094A51E24DC82000BB1A4 /* Model */,
 				69A34BF91E2382220084F027 /* AppDelegate.swift */,
 				69A34BFB1E2382220084F027 /* LoginViewController.swift */,
+				69F0949B1E24D939000BB1A4 /* SignupViewController.swift */,
 				69A34BFD1E2382220084F027 /* Main.storyboard */,
 				69A34C031E2382220084F027 /* Assets.xcassets */,
 				69A34C051E2382220084F027 /* LaunchScreen.storyboard */,
 				69A34C081E2382220084F027 /* Info.plist */,
 				69F094AC1E24DF4F000BB1A4 /* LoginDemo.xcdatamodeld */,
 				69EF4F401E23F8B0004A0A36 /* DesignableButton.swift */,
-				69F0949B1E24D939000BB1A4 /* SignupViewController.swift */,
 			);
 			path = LoginDemo;
 			sourceTree = "<group>";
@@ -79,7 +81,8 @@
 		69F094A51E24DC82000BB1A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				69F094B71E24EB52000BB1A4 /* SignUp.swift */,
+				691F915A1E256CF9002FA265 /* SignUp+CoreDataClass.swift */,
+				691F915B1E256CF9002FA265 /* SignUp+CoreDataProperties.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -156,10 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69F094B91E24ED8F000BB1A4 /* SignUp.swift in Sources */,
+				691F915D1E256CF9002FA265 /* SignUp+CoreDataProperties.swift in Sources */,
 				69F094AE1E24DF4F000BB1A4 /* LoginDemo.xcdatamodeld in Sources */,
 				69F094A91E24DED6000BB1A4 /* LoginViewController.swift in Sources */,
 				69A34BFA1E2382220084F027 /* AppDelegate.swift in Sources */,
+				691F915C1E256CF9002FA265 /* SignUp+CoreDataClass.swift in Sources */,
 				69F0949C1E24D939000BB1A4 /* SignupViewController.swift in Sources */,
 				69EF4F411E23F8B0004A0A36 /* DesignableButton.swift in Sources */,
 			);

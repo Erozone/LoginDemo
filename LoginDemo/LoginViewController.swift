@@ -19,8 +19,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signupButtonOutlet: UIButton!
     
     
-    var user : [SignUp] = []
-    
     
     func designView(){
         self.loginButtonOutlet.layer.cornerRadius = 10
@@ -30,14 +28,21 @@ class LoginViewController: UIViewController {
     func logInMethod(){
         let delegate = UIApplication.shared.delegate as? AppDelegate
         if let context = delegate?.persistentContainer.viewContext{
-            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SignUp")
+            
+            let fetchRequest:NSFetchRequest<SignUp> = SignUp.fetchRequest()
             do{
-//                user = try(context.execute(fetchRequest))
                 
-                if (user[0].email == email.text) && (user[0].password == password.text){
-                    print("Login Sucessfully")
-                }else{
-                    print("Wrong Credetial")
+                let users = try(context.fetch(fetchRequest))
+                
+                for user in users{
+                    if (user.email == email.text) && (user.password == password.text){
+                        print("Login Sucessfully")
+                        email.text = ""
+                        password.text = ""
+                    }else{
+                        print("Wrong Credetial")
+                    }
+                    break
                 }
             }catch let err{
                 print(err)
