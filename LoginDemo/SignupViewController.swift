@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SignupViewController: UIViewController {
 
@@ -20,9 +21,25 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         // Do any additional setup after loading the view.
     }
 
+    func saveData(){
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = delegate?.persistentContainer.viewContext{
+         //.   let user = NSEntityDescription.insertNewObject(forEntityName: "SingUp", into: context) as! SignUp
+            let user = SignUp(context: context)
+            user.firstName = firstName.text
+            user.lastName = lastName.text
+            user.email = email.text
+            user.password = password.text
+            
+            delegate?.saveContext()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,7 +49,13 @@ class SignupViewController: UIViewController {
     
     
     @IBAction func continueButton(_ sender: UIButton) {
-        
+        if(firstName.text == "" || lastName.text == "" || email.text == "" || password.text == ""){
+            print("TextField is empty.Please fill all textfield")
+        }else{
+            saveData()
+            print("Data Saved")
+            self.performSegue(withIdentifier: "toLogIn", sender: self)
+        }
     }
     
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LoginViewController: UIViewController {
 
@@ -18,9 +19,30 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signupButtonOutlet: UIButton!
     
     
+    var user : [SignUp] = []
+    
+    
     func designView(){
         self.loginButtonOutlet.layer.cornerRadius = 10
         self.signupButtonOutlet.layer.cornerRadius = 10
+    }
+    
+    func logInMethod(){
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = delegate?.persistentContainer.viewContext{
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SignUp")
+            do{
+//                user = try(context.execute(fetchRequest))
+                
+                if (user[0].email == email.text) && (user[0].password == password.text){
+                    print("Login Sucessfully")
+                }else{
+                    print("Wrong Credetial")
+                }
+            }catch let err{
+                print(err)
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -39,7 +61,11 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButton(_ sender: UIButton) {
-        
+        if(email.text != "") && (password.text != ""){
+            logInMethod()
+        }else{
+            print("Please Fill Both Textfield")
+        }
     }
     
     
