@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
         if let context = delegate?.persistentContainer.viewContext{
             
             let fetchRequest:NSFetchRequest<SignUp> = SignUp.fetchRequest()
+
             do{
                 
                 let users = try(context.fetch(fetchRequest))
@@ -42,7 +43,7 @@ class LoginViewController: UIViewController {
                     }else{
                         print("Wrong Credetial")
                     }
-                    break
+                    //break
                 }
             }catch let err{
                 print(err)

@@ -29,8 +29,7 @@ class SignupViewController: UIViewController {
     func saveData(){
         let delegate = UIApplication.shared.delegate as? AppDelegate
         if let context = delegate?.persistentContainer.viewContext{
-         //.   let user = NSEntityDescription.insertNewObject(forEntityName: "SingUp", into: context) as! SignUp
-            let user = SignUp(context: context)
+           let user = NSEntityDescription.insertNewObject(forEntityName: "SignUp", into: context) as! SignUp
             user.firstName = firstName.text
             user.lastName = lastName.text
             user.email = email.text
