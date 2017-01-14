@@ -11,6 +11,9 @@ import CoreData
 
 class SignupViewController: UIViewController {
 
+    
+    var displayError = ""
+    
     //MARK:- Outlets
     
     @IBOutlet weak var firstName: UITextField!
@@ -59,12 +62,20 @@ class SignupViewController: UIViewController {
     
     
     @IBAction func continueButton(_ sender: UIButton) {
-        if(firstName.text == "" || lastName.text == "" || email.text == "" || password.text == ""){
-            let displayError = "TextField is empty.Please fill all textfield"
-            
-        }else{
-            //saveData()
-            //print("Data Saved")
+        if(firstName.text == "" ){
+             displayError = "Please enter first Name"
+        }else if  password.text == ""{
+             displayError = "Please enter password"
+        }else if lastName.text == ""{
+             displayError = "Please enter Last Name"
+        }else if email.text == ""{
+             displayError = "Please enter Email"
+        }
+        
+        if displayError != ""{
+            displayAlert(title: "Incomplete Form", displayError: displayError)
+        }
+        else{
             self.performSegue(withIdentifier: "continueSegue", sender: self)
         }
     }

@@ -205,6 +205,7 @@
                         <outlet property="loginButtonOutlet" destination="GpO-2I-A1z" id="fC6-hZ-BEZ"/>
                         <outlet property="password" destination="st3-pG-ach" id="k5g-Qd-8gV"/>
                         <outlet property="signupButtonOutlet" destination="fHY-gv-ruN" id="eFd-Sr-tbk"/>
+                        <segue destination="a2C-Hf-Gat" kind="show" identifier="toMainVCFromLogin" id="Hqn-cv-1Jg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -302,7 +303,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -415,10 +416,10 @@
             </objects>
             <point key="canvasLocation" x="861" y="33"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Ysb-fV-IvJ">
             <objects>
-                <viewController id="a2C-Hf-Gat" sceneMemberID="viewController">
+                <viewController id="a2C-Hf-Gat" customClass="MainViewController" customModule="LoginDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WD2-4r-hZI"/>
                         <viewControllerLayoutGuide type="bottom" id="y9g-gV-vNl"/>
@@ -430,19 +431,63 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangebg" translatesAutoresizingMaskIntoConstraints="NO" id="PlI-fI-7np">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bnr-ok-urP" userLabel="profilePhoto">
+                                <rect key="frame" x="67" y="233.5" width="240" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="86l-Hs-Ifr"/>
+                                    <constraint firstAttribute="height" constant="200" id="swF-r5-mQ0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsV-8W-Wxf">
+                                <rect key="frame" x="67" y="146" width="240" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.018645260479999998" green="0.4776622653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HELLO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7p-dR-kCr">
+                                <rect key="frame" x="127" y="88" width="120" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.018645260479999998" green="0.4776622653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zz8-Tc-WF7">
+                                <rect key="frame" x="87" y="543" width="200" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.018645260479999998" green="0.4776622653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButton:" destination="a2C-Hf-Gat" eventType="touchUpInside" id="YCY-ra-rzM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Bnr-ok-urP" firstAttribute="centerY" secondItem="tCT-77-61H" secondAttribute="centerY" id="Dbl-Ru-pg2"/>
                             <constraint firstAttribute="trailing" secondItem="PlI-fI-7np" secondAttribute="trailing" id="LaZ-c1-BJa"/>
                             <constraint firstItem="PlI-fI-7np" firstAttribute="leading" secondItem="tCT-77-61H" secondAttribute="leading" id="SKF-MP-mIW"/>
                             <constraint firstItem="PlI-fI-7np" firstAttribute="top" secondItem="WD2-4r-hZI" secondAttribute="bottom" id="awD-ua-jxS"/>
                             <constraint firstItem="y9g-gV-vNl" firstAttribute="top" secondItem="PlI-fI-7np" secondAttribute="bottom" id="jA6-iR-tLi"/>
+                            <constraint firstItem="Bnr-ok-urP" firstAttribute="centerX" secondItem="tCT-77-61H" secondAttribute="centerX" id="nMk-DQ-Mlq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logoutButtonoutlet" destination="Zz8-Tc-WF7" id="1Xv-Z7-e37"/>
+                        <outlet property="profilePictureImageView" destination="Bnr-ok-urP" id="tbg-JJ-dxd"/>
+                        <outlet property="usernameLabel" destination="wsV-8W-Wxf" id="TeH-DV-oC8"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toLoginVC" id="G1e-2n-AVx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Brt-cw-pQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="825"/>
+            <point key="canvasLocation" x="860" y="824.43778110944538"/>
         </scene>
         <!--Continue View Controller-->
         <scene sceneID="yxg-Gb-aMd">
@@ -555,4 +600,8 @@
         <image name="orangebg" width="750" height="1334"/>
         <image name="password" width="48" height="48"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="G1e-2n-AVx"/>
+        <segue reference="Hqn-cv-1Jg"/>
+    </inferredMetricsTieBreakers>
 </document>

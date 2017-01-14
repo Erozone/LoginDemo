@@ -20,6 +20,7 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
     var gender = "male"
     var birthDay = ""
     var profilePhoto: NSData?
+    var displayError = ""
     
     
     //OUTLETS
@@ -61,6 +62,15 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
         }
     }
     
+    func displayAlert(title: String,displayError: String){
+        let alert = UIAlertController(title: title, message: displayError, preferredStyle: UIAlertControllerStyle.alert)
+        let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { action in
+            self.dismiss(animated: true, completion: nil)})
+        alert.addAction(alertAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,9 +98,17 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
     
     
     @IBAction func signupUser(_ sender: UIButton) {
-        saveData()
-        print("Data Saved!!")
-        performSegue(withIdentifier: "toMainVCFromSignUp", sender: self)
+        
+        if bdayTextField.text == ""{
+            displayError = "Please tell me what is your birthday"
+            displayAlert(title: "Incomlete Form", displayError: displayError)
+        }
+        
+        if(bdayTextField.text != "" && ProPicImageView.image != nil){
+            saveData()
+            print("Data Saved!!")
+            performSegue(withIdentifier: "toMainVCFromSignUp", sender: self)
+        }
     }
 
 
@@ -112,6 +130,18 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
         image.allowsEditing = false
         self.present(image, animated: true, completion: nil)
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMainVCFromSignUp"{
+            let mainVC = segue.destination as! MainViewController
+            mainVC.firstName = firstName
+            mainVC.lastName = lastName
+            mainVC.email = email
+            mainVC.password = password
+            mainVC.gender = gender
+            mainVC.birthDay = birthDay
+            mainVC.profilePhoto = UIImage(data: profilePhoto as! Data)
+        }
     }
     
 }
