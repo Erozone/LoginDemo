@@ -19,6 +19,7 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
     var password = ""
     var gender = "male"
     var birthDay = ""
+    var profilePhoto: NSData?
     
     
     //OUTLETS
@@ -30,6 +31,7 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
     @IBOutlet weak var chooseProPicButton: UIButton!
     @IBOutlet weak var ProPicImageView: UIImageView!
     
+    //Picks the select image and set it to imageView
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         self.dismiss(animated: true, completion: nil)
@@ -37,8 +39,26 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
             ProPicImageView.image = pickedImage
             ProPicImageView.layer.cornerRadius = ProPicImageView.frame.size.width/2
             ProPicImageView.clipsToBounds = true
+            profilePhoto = UIImageJPEGRepresentation(pickedImage, 1) as NSData?
         }
         
+    }
+    
+    //Save Data to coredata
+    func saveData(){
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = delegate?.persistentContainer.viewContext{
+            let newUser = NSEntityDescription.insertNewObject(forEntityName: "SignUp", into: context) as! SignUp
+            newUser.firstName = firstName
+            newUser.lastName = lastName
+            newUser.email = email
+            newUser.password = password
+            newUser.gender = gender
+            newUser.birthday = birthDay
+            newUser.profilePicture = profilePhoto
+            
+            delegate?.saveContext()
+        }
     }
     
     override func viewDidLoad() {
@@ -68,7 +88,9 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
     
     
     @IBAction func signupUser(_ sender: UIButton) {
-        
+        saveData()
+        print("Data Saved!!")
+        performSegue(withIdentifier: "toMainVCFromSignUp", sender: self)
     }
 
 

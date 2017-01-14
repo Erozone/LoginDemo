@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		691F915C1E256CF9002FA265 /* SignUp+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F915A1E256CF9002FA265 /* SignUp+CoreDataClass.swift */; };
-		691F915D1E256CF9002FA265 /* SignUp+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F915B1E256CF9002FA265 /* SignUp+CoreDataProperties.swift */; };
 		6982B9741E2A7C2900AC2EF2 /* Inconsolata-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6982B9721E2A7C2900AC2EF2 /* Inconsolata-Bold.ttf */; };
 		6982B9751E2A7C2900AC2EF2 /* Inconsolata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6982B9731E2A7C2900AC2EF2 /* Inconsolata-Regular.ttf */; };
 		6982B97A1E2A7C3300AC2EF2 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6982B9761E2A7C3300AC2EF2 /* NotoSans-Bold.ttf */; };
@@ -16,6 +14,8 @@
 		6982B97C1E2A7C3300AC2EF2 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6982B9781E2A7C3300AC2EF2 /* NotoSans-Italic.ttf */; };
 		6982B97D1E2A7C3300AC2EF2 /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6982B9791E2A7C3300AC2EF2 /* NotoSans-Regular.ttf */; };
 		6982B97F1E2A812000AC2EF2 /* ContinueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6982B97E1E2A812000AC2EF2 /* ContinueViewController.swift */; };
+		6982B9821E2A8E7D00AC2EF2 /* SignUp+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6982B9801E2A8E7D00AC2EF2 /* SignUp+CoreDataClass.swift */; };
+		6982B9831E2A8E7D00AC2EF2 /* SignUp+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6982B9811E2A8E7D00AC2EF2 /* SignUp+CoreDataProperties.swift */; };
 		69A34BFA1E2382220084F027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A34BF91E2382220084F027 /* AppDelegate.swift */; };
 		69A34BFF1E2382220084F027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A34BFD1E2382220084F027 /* Main.storyboard */; };
 		69A34C041E2382220084F027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A34C031E2382220084F027 /* Assets.xcassets */; };
@@ -27,8 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		691F915A1E256CF9002FA265 /* SignUp+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignUp+CoreDataClass.swift"; sourceTree = "<group>"; };
-		691F915B1E256CF9002FA265 /* SignUp+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignUp+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6982B9671E2A7C1800AC2EF2 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		6982B9681E2A7C1800AC2EF2 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		6982B9691E2A7C1800AC2EF2 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -47,6 +45,8 @@
 		6982B9781E2A7C3300AC2EF2 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
 		6982B9791E2A7C3300AC2EF2 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		6982B97E1E2A812000AC2EF2 /* ContinueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueViewController.swift; sourceTree = "<group>"; };
+		6982B9801E2A8E7D00AC2EF2 /* SignUp+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignUp+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6982B9811E2A8E7D00AC2EF2 /* SignUp+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SignUp+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		69A34BF61E2382220084F027 /* LoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A34BF91E2382220084F027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69A34BFB1E2382220084F027 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		69F094A51E24DC82000BB1A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				691F915A1E256CF9002FA265 /* SignUp+CoreDataClass.swift */,
-				691F915B1E256CF9002FA265 /* SignUp+CoreDataProperties.swift */,
+				6982B9801E2A8E7D00AC2EF2 /* SignUp+CoreDataClass.swift */,
+				6982B9811E2A8E7D00AC2EF2 /* SignUp+CoreDataProperties.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -216,12 +216,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691F915D1E256CF9002FA265 /* SignUp+CoreDataProperties.swift in Sources */,
 				69F094AE1E24DF4F000BB1A4 /* LoginDemo.xcdatamodeld in Sources */,
+				6982B9821E2A8E7D00AC2EF2 /* SignUp+CoreDataClass.swift in Sources */,
 				69F094A91E24DED6000BB1A4 /* LoginViewController.swift in Sources */,
+				6982B9831E2A8E7D00AC2EF2 /* SignUp+CoreDataProperties.swift in Sources */,
 				6982B97F1E2A812000AC2EF2 /* ContinueViewController.swift in Sources */,
 				69A34BFA1E2382220084F027 /* AppDelegate.swift in Sources */,
-				691F915C1E256CF9002FA265 /* SignUp+CoreDataClass.swift in Sources */,
 				69F0949C1E24D939000BB1A4 /* SignupViewController.swift in Sources */,
 				69EF4F411E23F8B0004A0A36 /* DesignableButton.swift in Sources */,
 			);

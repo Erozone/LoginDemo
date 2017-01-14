@@ -2,7 +2,7 @@
 //  SignUp+CoreDataProperties.swift
 //  LoginDemo
 //
-//  Created by Mohit Kumar on 11/01/17.
+//  Created by Mohit Kumar on 14/01/17.
 //  Copyright © 2017 Mohit Kumar. All rights reserved.
 //
 
@@ -20,5 +20,8 @@ extension SignUp {
     @NSManaged public var firstName: String?
     @NSManaged public var lastName: String?
     @NSManaged public var password: String?
+    @NSManaged public var gender: String?
+    @NSManaged public var birthday: String?
+    @NSManaged public var profilePicture: NSData?
 
 }
