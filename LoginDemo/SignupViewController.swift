@@ -18,6 +18,17 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    //Alert View
+    
+    func displayAlert(title: String,displayError: String){
+        let alert = UIAlertController(title: title, message: displayError, preferredStyle: UIAlertControllerStyle.alert)
+        let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { action in
+            self.dismiss(animated: true, completion: nil)})
+        alert.addAction(alertAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,11 +60,22 @@ class SignupViewController: UIViewController {
     
     @IBAction func continueButton(_ sender: UIButton) {
         if(firstName.text == "" || lastName.text == "" || email.text == "" || password.text == ""){
-            print("TextField is empty.Please fill all textfield")
+            let displayError = "TextField is empty.Please fill all textfield"
+            
         }else{
-            saveData()
-            print("Data Saved")
-            self.performSegue(withIdentifier: "toLogIn", sender: self)
+            //saveData()
+            //print("Data Saved")
+            self.performSegue(withIdentifier: "continueSegue", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "continueSegue"{
+            let addUserInfoVC = segue.destination as! ContinueViewController
+            addUserInfoVC.firstName = firstName.text!
+            addUserInfoVC.lastName = lastName.text!
+            addUserInfoVC.email = email.text!
+            addUserInfoVC.password = password.text!
         }
     }
     

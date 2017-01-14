@@ -18,7 +18,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButtonOutlet: UIButton!
     @IBOutlet weak var signupButtonOutlet: UIButton!
     
+    //Alert View
     
+    func displayAlert(title: String,displayError: String){
+        let alert = UIAlertController(title: title, message: displayError, preferredStyle: UIAlertControllerStyle.alert)
+        let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { action in
+            self.dismiss(animated: true, completion: nil)})
+        alert.addAction(alertAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     
     func designView(){
         self.loginButtonOutlet.layer.cornerRadius = 10
