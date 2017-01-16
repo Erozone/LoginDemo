@@ -42,8 +42,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        customizeView()
+        
         loadData()
+        customizeView()
         // Do any additional setup after loading the view.
     }
 

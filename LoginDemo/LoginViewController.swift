@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
 
     //MARK:- Properties
     
-    var displayError = ""
+    
     var username = ""
     var passwordVariable = ""
     var profilePhoto: UIImage? = nil
@@ -59,6 +59,7 @@ class LoginViewController: UIViewController {
     }
     
     func logInMethod(){
+        var displayError = ""
         let delegate = UIApplication.shared.delegate as? AppDelegate
         if let context = delegate?.persistentContainer.viewContext{
             
@@ -120,6 +121,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButton(_ sender: UIButton) {
         
+        var displayError = ""
         if(email.text == ""){
             displayError = "Please Enter Valid Email"
         }else if(password.text == ""){
