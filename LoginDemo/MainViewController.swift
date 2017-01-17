@@ -28,9 +28,12 @@ class MainViewController: UIViewController {
     @IBOutlet weak var logoutButtonoutlet: UIButton!
     
     func customizeView(){
-         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.size.width/3
-         usernameLabel.layer.cornerRadius = 20
-         logoutButtonoutlet.layer.cornerRadius = 20
+         profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.size.width/2
+         profilePictureImageView.contentMode = .scaleAspectFill
+    //     profilePictureImageView.clipsToBounds = true
+         profilePictureImageView.layer.masksToBounds = true
+         usernameLabel.layer.cornerRadius = 10
+         logoutButtonoutlet.layer.cornerRadius = 10
     }
     
     func loadData(){
@@ -41,11 +44,13 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        loadData()
         customizeView()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {

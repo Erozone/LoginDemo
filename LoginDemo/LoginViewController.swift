@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var loginButtonOutlet: UIButton!
     @IBOutlet weak var signupButtonOutlet: UIButton!
+    @IBOutlet weak var profilePhotoImageView: UIImageView!
     
     //MARK:- user Functions
     
@@ -56,6 +57,7 @@ class LoginViewController: UIViewController {
     func designView(){
         self.loginButtonOutlet.layer.cornerRadius = 10
         self.signupButtonOutlet.layer.cornerRadius = 10
+        profilePhotoImageView.layer.cornerRadius = profilePhotoImageView.frame.size.width/2
     }
     
     func logInMethod(){
