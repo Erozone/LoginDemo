@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController,UITextFieldDelegate{
 
     var displayError = ""
     
@@ -31,9 +31,17 @@ class SignupViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    func setupDelegate(){
+        firstName.delegate = self
+        lastName.delegate = self
+        email.delegate = self
+        password.delegate = self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupDelegate()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -53,6 +61,11 @@ class SignupViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     //MARK:- Actions

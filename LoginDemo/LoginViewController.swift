@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
     //MARK:- Properties
     
@@ -105,12 +105,21 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //clearData()
+        email.delegate = self
+        password.delegate = self
         designView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARKL:- UITextfield Method
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     //MARK:- Action method

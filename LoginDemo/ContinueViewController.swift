@@ -74,10 +74,16 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bdayTextField.delegate = self
         bdayTextField.keyboardType = UIKeyboardType.phonePad
         femaleButton.isHighlighted = true
         
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func maleButtonPressed(_ sender: UIButton) {
