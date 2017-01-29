@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
 
     //MARK:- Properties
     
-    
     var username = ""
     var passwordVariable = ""
     var profilePhoto: UIImage? = nil

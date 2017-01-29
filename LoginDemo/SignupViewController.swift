@@ -11,7 +11,6 @@ import CoreData
 
 class SignupViewController: UIViewController {
 
-    
     var displayError = ""
     
     //MARK:- Outlets
@@ -35,8 +34,6 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
         // Do any additional setup after loading the view.
     }
 
@@ -59,7 +56,6 @@ class SignupViewController: UIViewController {
     }
     
     //MARK:- Actions
-    
     
     @IBAction func continueButton(_ sender: UIButton) {
         if(firstName.text == "" ){
@@ -89,7 +85,6 @@ class SignupViewController: UIViewController {
             addUserInfoVC.password = password.text!
         }
     }
-    
     
     @IBAction func toLoginButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "toLogIn", sender: self)
