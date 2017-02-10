@@ -24,8 +24,7 @@ class SignupViewController: UIViewController,UITextFieldDelegate{
     
     func displayAlert(title: String,displayError: String){
         let alert = UIAlertController(title: title, message: displayError, preferredStyle: UIAlertControllerStyle.alert)
-        let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { action in
-            self.dismiss(animated: true, completion: nil)})
+        let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
         alert.addAction(alertAction)
         
         self.present(alert, animated: true, completion: nil)
