@@ -38,8 +38,15 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
         self.dismiss(animated: true, completion: nil)
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
             ProPicImageView.image = pickedImage
-            ProPicImageView.layer.cornerRadius = ProPicImageView.frame.size.width/2
+//            ProPicImageView.layer.cornerRadius = ProPicImageView.frame.size.width/2
+            
+            ProPicImageView.layer.borderWidth = 1
+            ProPicImageView.layer.masksToBounds = false
+            ProPicImageView.layer.borderColor = UIColor.black.cgColor
+            ProPicImageView.layer.cornerRadius = ProPicImageView.frame.height/2
             ProPicImageView.clipsToBounds = true
+            
+//            ProPicImageView.clipsToBounds = true
             profilePhoto = UIImageJPEGRepresentation(pickedImage, 1) as NSData?
         }
         
@@ -64,8 +71,7 @@ class ContinueViewController: UIViewController,UITextFieldDelegate,UINavigationC
     
     func displayAlert(title: String,displayError: String){
         let alert = UIAlertController(title: title, message: displayError, preferredStyle: UIAlertControllerStyle.alert)
-        let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { action in
-            self.dismiss(animated: true, completion: nil)})
+        let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
         alert.addAction(alertAction)
         
         self.present(alert, animated: true, completion: nil)

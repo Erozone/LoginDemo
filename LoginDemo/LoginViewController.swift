@@ -29,8 +29,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     func displayAlert(title: String,displayError: String){
         let alert = UIAlertController(title: title, message: displayError, preferredStyle: UIAlertControllerStyle.alert)
-        let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { action in
-            self.dismiss(animated: true, completion: nil)})
+        let alertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
         alert.addAction(alertAction)
         
         self.present(alert, animated: true, completion: nil)
@@ -54,10 +53,13 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     }
     
     func designView(){
-        self.loginButtonOutlet.layer.cornerRadius = 10
-        self.signupButtonOutlet.layer.cornerRadius = 10
-        profilePhotoImageView.layer.cornerRadius = profilePhotoImageView.frame.size.width/2
+        profilePhotoImageView.layer.masksToBounds = false
+        profilePhotoImageView.layer.borderWidth = 1
+        profilePhotoImageView.layer.borderColor = UIColor.black.cgColor
+        profilePhotoImageView.layer.cornerRadius = profilePhotoImageView.frame.width/2
+        profilePhotoImageView.clipsToBounds = true
     }
+    
     
     func logInMethod(){
         var displayError = ""

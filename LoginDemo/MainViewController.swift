@@ -29,13 +29,15 @@ class MainViewController: UIViewController {
     
     func customizeView(){
         
-//        profilePictureImageView.translatesAutoresizingMaskIntoConstraints = false
-        profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.size.width/2
-         //profilePictureImageView.clipsToBounds = true
-       profilePictureImageView.layer.masksToBounds = true
-        logoutButtonoutlet.layer.cornerRadius = 10
+//        profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.size.height/2
+//        profilePictureImageView.clipsToBounds = true
+//        profilePictureImageView.layer.masksToBounds = true
         
-
+        profilePictureImageView.layer.borderWidth = 1
+        profilePictureImageView.layer.masksToBounds = false
+        profilePictureImageView.layer.borderColor = UIColor.black.cgColor
+        profilePictureImageView.layer.cornerRadius = profilePictureImageView.frame.height/2
+        profilePictureImageView.clipsToBounds = true
     }
     
     func loadData(){
@@ -48,7 +50,6 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.layoutIfNeeded()
         loadData()
         customizeView()
         // Do any additional setup after loading the view.

@@ -127,9 +127,8 @@
 				6982B97E1E2A812000AC2EF2 /* ContinueViewController.swift */,
 				69A34C031E2382220084F027 /* Assets.xcassets */,
 				69A34C051E2382220084F027 /* LaunchScreen.storyboard */,
-				69A34C081E2382220084F027 /* Info.plist */,
 				69F094AC1E24DF4F000BB1A4 /* LoginDemo.xcdatamodeld */,
-				69EF4F401E23F8B0004A0A36 /* DesignableButton.swift */,
+				69A34C081E2382220084F027 /* Info.plist */,
 			);
 			path = LoginDemo;
 			sourceTree = "<group>";
@@ -140,6 +139,7 @@
 				6982B9801E2A8E7D00AC2EF2 /* SignUp+CoreDataClass.swift */,
 				6982B9811E2A8E7D00AC2EF2 /* SignUp+CoreDataProperties.swift */,
 				690277651E3E636700EA54A6 /* DesignableTextField.swift */,
+				69EF4F401E23F8B0004A0A36 /* DesignableButton.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";

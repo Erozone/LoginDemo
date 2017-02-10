@@ -45,18 +45,18 @@ class SignupViewController: UIViewController,UITextFieldDelegate{
         // Do any additional setup after loading the view.
     }
 
-    func saveData(){
-        let delegate = UIApplication.shared.delegate as? AppDelegate
-        if let context = delegate?.persistentContainer.viewContext{
-           let user = NSEntityDescription.insertNewObject(forEntityName: "SignUp", into: context) as! SignUp
-            user.firstName = firstName.text
-            user.lastName = lastName.text
-            user.email = email.text
-            user.password = password.text
-            
-            delegate?.saveContext()
-        }
-    }
+//    func saveData(){
+//        let delegate = UIApplication.shared.delegate as? AppDelegate
+//        if let context = delegate?.persistentContainer.viewContext{
+//           let user = NSEntityDescription.insertNewObject(forEntityName: "SignUp", into: context) as! SignUp
+//            user.firstName = firstName.text
+//            user.lastName = lastName.text
+//            user.email = email.text
+//            user.password = password.text
+//            
+//            delegate?.saveContext()
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
