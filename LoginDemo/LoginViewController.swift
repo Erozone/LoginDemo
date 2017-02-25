@@ -56,7 +56,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         profilePhotoImageView.layer.masksToBounds = false
         profilePhotoImageView.layer.borderWidth = 1
         profilePhotoImageView.layer.borderColor = UIColor.black.cgColor
-        profilePhotoImageView.layer.cornerRadius = profilePhotoImageView.frame.width/2
+        profilePhotoImageView.layer.cornerRadius = profilePhotoImageView.frame.height/2
         profilePhotoImageView.clipsToBounds = true
     }
     
@@ -71,6 +71,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             do{
                 
                 let users = try(context.fetch(fetchRequest))
+                print(users.count)
                 
                 if users.count > 0{
                     for user in users{
@@ -152,6 +153,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMainVCFromLogin"{
             let mainVC = segue.destination as! MainViewController
+            mainVC.email=email.text!
+            mainVC.password = password.text!
             mainVC.firstName = username
             mainVC.profilePhoto = profilePhoto
         }
